@@ -61,3 +61,234 @@
     font-weight: 900;
     font-style: normal;
 }
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-green {
+    color: #40A130;
+}
+
+.text-grey {
+    color: #909090;
+}
+
+.btn-green {
+    border: none;
+    background-color: #40A130;
+}
+
+.btn-black {
+    border: none;
+    background-color: #171717;
+}
+
+.btn-white {
+    border: none;
+    background-color: white;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+header {
+    background: url("https://placehold.co/2000x1000");
+}
+
+#contact-sect {
+    grid-template-columns: 2fr  1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
+    h3 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    h1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    p {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    div {
+        display: flex;
+        gap: 10px;
+        grid-column: 1;
+        grid-row: 4;
+    }
+    img {
+        grid-column: 2;
+        grid-row: 2/4;
+    }
+}
+
+#summer-sect {
+    background: url("https://placehold.co/2000x700");
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    div {
+        display: grid;
+        justify-content: center;
+        h1 {
+
+        }
+        p {
+            text-align: center;
+        }
+        button {
+            
+        }
+    }
+}
+
+#mechanic-sect  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    h3 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+    h1 {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    #service-dept {
+        grid-column: 1;
+        grid-row: 3;  
+    }
+    #sales-dept {
+        grid-column: 2;
+        grid-row: 3;  
+    }
+    .dept-card {
+        display: grid;
+        justify-content: center;
+    }
+}
+
+#boat-head-sect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    img {
+        grid-column: 1;
+        grid-row: 1 / -1;
+    }
+    h1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    p {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    button {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+
+#nautic-star-sect {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    #nautic-head {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content 1fr min-content min-content min-content;
+        #nautic-star-logo {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        h3 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .nautic-p1 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .nautic-p2 {
+            grid-column: 1;
+            grid-row: 4;    
+        }
+        .nautic-p3 {
+            grid-column: 1;
+            grid-row: 5;
+        }
+        button {
+            grid-column: 1;
+            grid-row: 6;
+        }
+        .nautic-img {
+            grid-column: 2;
+            grid-row: 1 / -1;
+        }
+    }
+    .nautic-cards {
+        display: grid;
+        img {
+
+        }
+        div {
+            display: grid;
+            row-gap: 20px;
+            .boat-name {
+
+            }
+            .boat-price {
+
+            }
+        }
+        h1 {
+            justify-self: end;
+        }
+    }
+    .nautic-card-1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .nautic-card-2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .nautic-card-3 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+#winter-sect {
+    background: url("https://placehold.co/2000x700");
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    div {
+        display: grid;
+        justify-content: center;
+        h1 {
+
+        }
+        p {
+            text-align: center;
+        }
+        button {
+            
+        }
+    }
+}
