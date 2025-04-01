@@ -1,54 +1,61 @@
-.dm-100 {
+/*Extra-Light*/
+.dm-xtra-light {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
 }
 
-.dm-300 {
+/*Light*/
+.dm-light {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
 
-.dm-400 {
+/*Regular*/
+.dm-reg {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-.dm-500 {
+/*Medium*/
+.dm-med {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
 
-.dm-700 {
+/*Bold*/
+.dm-bold {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
 
-.dm-700-italic {
+/*Bold-Italic*/
+.dm-bold-it {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: italic;
 }
 
-
-.dm-800 {
+/*Extra-Bold*/
+.dm-xtra-bold {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
 }
 
-.dm-900 {
+/*Black*/
+.dm-black {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
