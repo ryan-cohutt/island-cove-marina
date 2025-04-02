@@ -1,3 +1,15 @@
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 /*Extra-Light*/
 .dm-xtra-light {
     font-family: "DM Sans", sans-serif;
@@ -28,6 +40,14 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+}
+
+/*Medium-Italic*/
+.dm-med-it {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
 }
 
 /*Bold*/
@@ -102,65 +122,230 @@
 }
 
 header {
-    background: url("https://placehold.co/2000x1000");
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 950px;
+    align-items: center;
+    background: url("../images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    nav {
+        padding-top: 40px;
+        width: 90% !important;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        width: 100%;
+        column-gap: 40px;
+        #header-logo {
+            justify-self: start;
+            width: 200px;
+        }
+        ul {
+            justify-self: center;
+            max-width: 900px;
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 0;
+            margin: 0;
+            li {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                h3 {
+                    margin: 0;
+                    font-size: 27px;
+                    text-wrap: nowrap;
+                }
+                svg {
+                    width: 20px;
+                }
+            }
+        }
+        button {
+            margin: 0;
+            padding: 0;
+            justify-self: end;
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
+        }
+    }
+    div {
+        width: 1400px;
+        height: 100%;
+        grid-row: 2;
+        display: grid;
+        grid-template-rows: min-content min-content 1fr;
+        row-gap: 30px;
+        h1 {
+            padding-top: 70px;
+            margin: 0;
+            grid-row: 1;
+            font-size: 82px;
+            line-height: 88px;
+            justify-self: start;
+            width: 60%;
+        }
+        .btn-green {
+            grid-row: 2;
+            font-size: 27px;
+            width: 430px;
+            height: 75px;
+            justify-self: start;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            svg {
+                width: 26px;
+                fill: white;
+            }
+        }
+        div {
+            grid-row: 3;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            column-gap: 40px;
+            .btn-white {
+                align-self: end;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+                h2 {
+                    font-size: 40px;
+                    margin: 0;
+                }
+                svg {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: grid;
+    justify-items: center;
 }
 
 #contact-sect {
+    padding: 80px 0;
+    width: 1400px;
+    display: grid;
     grid-template-columns: 2fr  1fr;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-rows: min-content min-content min-content min-content;
+    row-gap: 10px;
+    column-gap: 35px;
     h3 {
+        margin: 0;
+        font-size: 30px;
         grid-column: 1;
         grid-row: 1;
     }
     h1 {
+        margin: 0;
+        font-size: 52px;
         grid-column: 1;
         grid-row: 2;
     }
     p {
+        margin: 0;
+        font-size: 27px;
+        line-height: 41px;
         grid-column: 1;
         grid-row: 3;
+        padding-bottom: 15px;
     }
     div {
         display: flex;
-        gap: 10px;
+        align-items: center;
+        justify-content: start;
+        gap: 35px;
         grid-column: 1;
         grid-row: 4;
+        button {
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
     }
     img {
+        align-self: center;
+        justify-self: end;
+        width: 550px;
         grid-column: 2;
-        grid-row: 2/4;
+        grid-row: 1 / -1;
     }
 }
 
 #summer-sect {
-    background: url("https://placehold.co/2000x700");
+    width: 100%;
+    height: 775px;
+    background: url("../images/summer.jpg");
     display: grid;
+    background-size: cover;
     align-content: center;
-    justify-content: center;
+    justify-items: center;
     div {
+        width: 675px;
+        height: min-content;
+        padding: 0 50px;
         display: grid;
-        justify-content: center;
+        justify-items: center;
+        row-gap: 24px;
         h1 {
-
+            margin: 0;
+            margin-top: 25px;
+            font-size: 52px;
         }
         p {
             text-align: center;
+            font-size: 27px;
+            line-height: 34px;
+            margin: 0;
+            width: 530px;
         }
         button {
-            
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
+            margin-bottom: -37px;
         }
     }
 }
 
 #mechanic-sect  {
+    padding: 80px 0;
+    width: 1400px;
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content 1fr;
+    row-gap: 5px;
+    column-gap: 22px;
     h3 {
+        margin: 0;
+        font-size: 30px;
         grid-column: 1 / -1;
         grid-row: 1;
     }
     h1 {
+        margin: 0;
+        font-size: 52px;
         grid-column: 1 / -1;
         grid-row: 2;
     }
@@ -170,93 +355,174 @@ header {
     }
     #sales-dept {
         grid-column: 2;
-        grid-row: 3;  
+        grid-row: 3;
     }
     .dept-card {
+        padding-top: 30px;
         display: grid;
-        justify-content: center;
+        grid-template-rows: min-content 1fr min-content;
+        row-gap: 24px;
+        justify-items: center;
+        h3 {
+            letter-spacing: 4px;
+            margin: 0;
+            font-size: 36px;
+        }
+        p {
+            justify-self: start;
+            width: 600px;
+            text-align: center;
+            margin: 0;
+            font-size: 27px;
+            line-height: 41px;
+        }
+        button {
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
+        }
     }
 }
 
 #boat-head-sect {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content 1fr min-content;
-    img {
-        grid-column: 1;
-        grid-row: 1 / -1;
+    justify-items: center;
+    align-items: center;
+    div {
+        padding: 80px 0;
+        width: 1400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 1fr min-content;
+        row-gap: 32px;
+        img {
+            width: 600px;
+            grid-column: 1;
+            grid-row: 1 / -1;
+            align-self: end;
+        }
+        h1 {
+            margin: 0;
+            font-size: 82px;
+            line-height: 88px;
+            grid-column: 2;
+            grid-row: 1;
+        }
+        p {
+            font-size: 48px;
+            line-height: 64px;
+            margin: 0;
+            grid-column: 2;
+            grid-row: 2;
+        }
+        button {
+            grid-column: 2;
+            grid-row: 3;
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
+        }        
     }
-    h1 {
-        grid-column: 2;
-        grid-row: 1;
-    }
-    p {
-        grid-column: 2;
-        grid-row: 2;
-    }
-    button {
-        grid-column: 2;
-        grid-row: 3;
-    }
+
 }
 
 #nautic-star-sect {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 50px;
+    row-gap: 100px;
+    padding: 80px 0;
+    width: 1400px;
     #nautic-head {
         grid-column: 1 / -1;
         grid-row: 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content min-content 1fr min-content min-content min-content;
+        grid-template-rows: min-content min-content min-content min-content min-content min-content;
+        row-gap: 20px;
+        column-gap: 40px;
         #nautic-star-logo {
             grid-column: 1;
             grid-row: 1;
+            width: 460px;
         }
         h3 {
+            font-size: 42px;
+            margin: 0;
             grid-column: 1;
             grid-row: 2;
         }
         .nautic-p1 {
+            font-size: 27px;
+            line-height: 41px;
+            margin: 0;
             grid-column: 1;
             grid-row: 3;
         }
         .nautic-p2 {
+            font-size: 27px;
+            margin: 0;
             grid-column: 1;
             grid-row: 4;    
         }
         .nautic-p3 {
+            font-size: 27px;
+            margin: 0;
             grid-column: 1;
             grid-row: 5;
         }
         button {
             grid-column: 1;
             grid-row: 6;
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
         }
-        .nautic-img {
+        #nautic-img {
+            padding-top: 50px;
             grid-column: 2;
             grid-row: 1 / -1;
+            justify-self: end;
+            width: 620px;
         }
     }
     .nautic-cards {
         display: grid;
+        grid-template-rows: min-content min-content min-content;
+        max-width: 100%;
         img {
-
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
         }
         div {
-            display: grid;
-            row-gap: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            height: min-content;
+            padding: 15px 0;
+            margin-top: 10px;
             .boat-name {
-
+                margin: 0;
+                padding: 0 28px;
+                font-size: 27px;
+                line-height: 32px
             }
-            .boat-price {
-
+            .boat-color {
+                margin: 0;
+                padding: 0 28px;
+                font-size: 27px;
             }
         }
         h1 {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 40px;
             justify-self: end;
+            align-self: end;
         }
     }
     .nautic-card-1 {
@@ -274,21 +540,133 @@ header {
 }
 
 #winter-sect {
-    background: url("https://placehold.co/2000x700");
+    width: 100%;
+    height: 775px;
+    background: url("../images/winter.jpg");
     display: grid;
+    background-size: cover;
     align-content: center;
-    justify-content: center;
+    justify-items: center;
     div {
+        width: 675px;
+        height: min-content;
+        padding: 0 50px;
         display: grid;
-        justify-content: center;
+        justify-items: center;
+        row-gap: 24px;
         h1 {
-
+            margin: 0;
+            margin-top: 25px;
+            font-size: 52px;
         }
         p {
             text-align: center;
+            font-size: 27px;
+            line-height: 34px;
+            margin: 0;
+            width: 530px;
         }
         button {
-            
+            font-size: 27px;
+            width: 330px;
+            height: 75px;
+            margin-bottom: -37px;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #171717;
+    display: grid;
+    justify-content: center;
+    padding: 50px 0;
+    .upper-footer {
+        width: 1400px;
+        padding-bottom: 40px;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content 1fr;
+        #footer-logo {
+            grid-column: 1;
+            grid-row: 1 / -1;
+            align-self: center;
+            justify-self: start;
+            padding-right: 140px;
+        }
+        .company-logos {
+            grid-column: 2;
+            grid-row: 1;
+            display: flex;
+            justify-content: space-around;
+            height: min-content;
+            padding-bottom: 40px;
+            img {
+                width: 222px;
+            }
+        }
+        .footer-pages {
+            grid-column: 2;
+            grid-row: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            grid-template-rows: 1fr 1fr;
+            font-size: 18px;
+            div {
+                display: grid;
+                grid-template-rows: min-content min-content min-content;
+                justify-items: start;
+                gap: 2px;
+                .footer-page-header {
+                    text-decoration: underline;
+                }
+                .footer-page-name {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+                p {
+                    margin: 0;
+                    a {
+                        color: #40A130;
+                    }
+                }
+            }
+        }
+    }
+    hr {
+        border: 1px white solid;
+        width: 100%;
+    }
+    .lower-footer {
+        width: 1400px;
+        font-size: 24px;
+        padding-top: 8px;
+        display: grid;
+        grid-template-columns: min-content min-content min-content 1fr;
+        column-gap: 15px;
+        p {
+            justify-self: start;
+            margin: 0;
+            text-wrap: nowrap;
+        }
+        svg {
+            width: 30px;
+            fill: white;
+        }
+        div {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            p {
+                margin: 0;
+            }
+            svg {
+                width: 12px;
+                fill: white;
+            }
         }
     }
 }
