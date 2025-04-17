@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 /*Extra-Light*/
 .dm-xtra-light {
     font-family: "DM Sans", sans-serif;
@@ -101,10 +105,10 @@ body {
 .btn-green {
     border: none;
     background-color: #40A130;
+    transition: .14s ease all;
 }
 
-.btn-black {
-    border: none;
+.btn-green:hover {
     background-color: #171717;
 }
 
@@ -121,7 +125,7 @@ body {
     background-color: white;
 }
 
-header {
+header.home {
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -132,50 +136,34 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     nav {
-        padding-top: 40px;
-        width: 70% !important;
-        grid-row: 1;
-        display: grid;
-        grid-template-columns: min-content 1fr min-content;
-        justify-content: center;
         width: 100%;
-        column-gap: 40px;
-        #header-logo {
-            justify-self: start;
-            width: 140px;
-        }
-        ul {
-            justify-self: center;
-            max-width: 900px;
-            list-style-type: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            padding: 0;
-            margin: 0;
-            li {
-                display: flex;
-                gap: 12px;
-                align-items: center;
-                h3 {
-                    margin: 0;
-                    font-size: 20px;
-                    text-wrap: nowrap;
-                }
-                svg {
-                    width: 15px;
+        padding: 40px 100px 0;
+        .icm-nav-bar {
+            padding-left: 30px;
+            ul {
+                li {
+                    padding: 0 20px;
                 }
             }
         }
-        button {
+        a {
+            color: #171717;
+            font-size: 20px;
+        }
+        a:hover {
+            color: #40A130;
+        }
+        .nav-contact {
             margin: 0;
             padding: 0;
             justify-self: end;
+            align-self: center;
             font-size: 20px;
             width: 180px;
             height: 50px;
         }
     }
-    div {
+    .home-hero {
         width: 1400px;
         height: 100%;
         grid-row: 2;
@@ -234,9 +222,131 @@ header {
     }
 }
 
+header.page {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background: #171717;
+    background-size: cover;
+    background-repeat: no-repeat;
+    nav {
+        width: 100%;
+        padding: 40px 100px 0;
+        .icm-nav-bar {
+            padding-left: 30px;
+            ul {
+                li {
+                    padding: 0 20px;
+                }
+            }
+        }
+        a {
+            color: white;
+            font-size: 20px;
+        }
+        a:hover {
+            color: #40A130;
+        }
+        .nav-contact {
+            margin: 0;
+            padding: 0;
+            justify-self: end;
+            align-self: center;
+            font-size: 20px;
+            width: 180px;
+            height: 50px;
+        }
+    }
+}
+
 main {
     display: grid;
     justify-items: center;
+}
+
+#yamaha-header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    background-image: url("/images/winter.jpg");
+    background-position: bottom;
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: #17171779;
+        padding: 70px 0;
+        img {
+            width: 650px;
+        }
+        h3 {
+            font-size: 50px;
+        }
+    }
+}
+
+.motor-sect {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 0 60px;
+    width: 1400px;
+    .motor-head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        h3 {
+            font-size: 42px;
+            margin: 0;
+        }
+    }
+    .motor-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 40px;
+        row-gap: 50px;
+        max-width: 100%;
+        .motor-item {
+            width: 100%;
+            grid-column: auto;
+            overflow: hidden;
+            div {
+                height: 350px;
+                button {
+                    position: absolute;
+                    margin: 15px 0 0 15px;
+                    padding: 7px 36px;
+                    background-color: #d72152;
+                    border: none;
+                    font-size: 24px;
+                }
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            h4 {
+                margin: 0;
+                padding: 8px 0 0 0;
+                font-size: 25px;
+            }
+            p {
+                font-size: 20px;
+                margin: 0;
+                span {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
 }
 
 #contact-sect {
@@ -312,6 +422,7 @@ main {
             margin: 0;
             margin-top: 25px;
             font-size: 52px;
+            text-align: center;
         }
         p {
             text-align: center;
@@ -593,7 +704,8 @@ footer {
             grid-row: 1 / -1;
             align-self: center;
             justify-self: start;
-            padding-right: 140px;
+            padding-right: 110px;
+            width: 450px;
         }
         .company-logos {
             grid-column: 2;
@@ -630,6 +742,10 @@ footer {
                     margin: 0;
                     a {
                         color: #40A130;
+                        transition: all .15s ease;
+                    }
+                    a:hover {
+                        color: white;
                     }
                 }
             }
