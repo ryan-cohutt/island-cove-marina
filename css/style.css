@@ -8,6 +8,7 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 button {
@@ -115,6 +116,11 @@ button {
 .btn-white {
     border: none;
     background-color: white;
+    transition: .14s ease all;
+}
+
+.btn-white:hover {
+    background-color: #b8b8b8;
 }
 
 .bg-black {
@@ -126,7 +132,7 @@ button {
 }
 
 header.home {
-    padding-bottom: 50px;
+    padding: 45px 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -137,21 +143,34 @@ header.home {
     background-repeat: no-repeat;
     nav {
         width: 100%;
-        padding: 40px 100px 0;
-        .icm-nav-bar {
-            padding-left: 30px;
-            ul {
-                li {
-                    padding: 0 20px;
+        .nav-bar {
+            padding: 0 100px;
+            display: grid;
+            grid-template-columns: min-content 1fr min-content;
+            align-items: center;
+            .navbar-brand {
+                padding-right: 30px;
+            }
+            div {
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    gap: 30px;
+                    margin: 0;
+                    li {
+                        a {
+                            font-size: 20px;
+                            color: #171717;
+                            text-decoration: none;
+                            margin: 0;
+                            transition: all .15s ease;
+                        }
+                        a:hover {
+                            color: #40A130;
+                        }
+                    }
                 }
             }
-        }
-        a {
-            color: #171717;
-            font-size: 20px;
-        }
-        a:hover {
-            color: #40A130;
         }
         .nav-contact {
             margin: 0;
@@ -204,18 +223,22 @@ header.home {
             column-gap: 40px;
             .btn-white {
                 align-self: end;
-                display: flex;
-                gap: 20px;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100px;
-                h2 {
-                    font-size: 40px;
-                    margin: 0;
-                }
-                svg {
-                    width: 40px;
+                a {
+                    text-decoration: none;
+                    color: #171717;
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100px;
+                    h2 {
+                        font-size: 40px;
+                        margin: 0;
+                    }
+                    svg {
+                        width: 40px;
+                    }
                 }
             }
         }
@@ -223,7 +246,7 @@ header.home {
 }
 
 header.page {
-    padding-bottom: 50px;
+    padding: 45px 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -233,21 +256,34 @@ header.page {
     background-repeat: no-repeat;
     nav {
         width: 100%;
-        padding: 40px 100px 0;
-        .icm-nav-bar {
-            padding-left: 30px;
-            ul {
-                li {
-                    padding: 0 20px;
+        .nav-bar {
+            padding: 0 100px;
+            display: grid;
+            grid-template-columns: min-content 1fr min-content;
+            align-items: center;
+            .navbar-brand {
+                padding-right: 30px;
+            }
+            div {
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    gap: 30px;
+                    margin: 0;
+                    li {
+                        a {
+                            font-size: 20px;
+                            color: white;
+                            text-decoration: none;
+                            margin: 0;
+                            transition: all .15s ease;
+                        }
+                        a:hover {
+                            color: #40A130;
+                        }
+                    }
                 }
             }
-        }
-        a {
-            color: white;
-            font-size: 20px;
-        }
-        a:hover {
-            color: #40A130;
         }
         .nav-contact {
             margin: 0;
@@ -710,20 +746,23 @@ footer {
         .company-logos {
             grid-column: 2;
             grid-row: 1;
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
             height: min-content;
-            padding-bottom: 40px;
-            img {
-                width: 222px;
+            a {
+                img {
+                    width: 222px;
+                }
             }
         }
         .footer-pages {
             grid-column: 2;
             grid-row: 2;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1.2fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr min-content min-content min-content;
+            column-gap: 50px;
+            text-wrap: nowrap;
             font-size: 18px;
             div {
                 display: grid;
@@ -762,27 +801,49 @@ footer {
         display: grid;
         grid-template-columns: min-content min-content min-content 1fr;
         column-gap: 15px;
+        .social-icons {
+            fill: white;
+            transition: all .15s ease;
+        }
+        .social-icons:hover {
+            fill: #40A130;
+        }
         p {
             justify-self: start;
             margin: 0;
             text-wrap: nowrap;
         }
+        a {
+            text-decoration: none;
+        }
         svg {
             width: 30px;
             fill: white;
         }
-        div {
+        .to-top {
             justify-self: end;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            transition: all .15s ease;
             p {
+                color: white;
                 margin: 0;
+                transition: all .15s ease;
             }
             svg {
                 width: 12px;
                 fill: white;
+                transition: all .15s ease;
+            }
+        }
+        .to-top:hover {
+            p {
+                color: #40A130;
+            }
+            svg {
+                fill: #40A130;
             }
         }
     }
