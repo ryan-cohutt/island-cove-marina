@@ -735,6 +735,7 @@ main {
         width: 675px;
         height: min-content;
         padding: 0 50px;
+        padding-bottom: 50px;
         display: grid;
         justify-items: center;
         row-gap: 24px;
@@ -744,24 +745,17 @@ main {
             font-size: 52px;
             text-align: center;
         }
-        p {
-            text-align: center;
-            font-size: 27px;
-            line-height: 34px;
-            margin: 0;
-            width: 530px;
-        }
     }
 }
 
 #map-sect {
-    width: 100%;
+    width: 1400px;
     display: flex;
     align-content: center;
     justify-content: center;
     div {
+        width: 100%;
         padding: 80px 0;
-        width: 1400px;
         display: flex;
         flex-direction: column;
         align-content: center;
