@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <title>Homepage</title>
 </head>
-<body>
+<body id="page-top">
     <header class="page">
         <nav>
             <div class="nav-bar">
@@ -31,42 +31,25 @@
     </main>
     <footer>
         <div class="upper-footer">
-            <img id="footer-logo" src="./images/IslandCoveWhiteLogo.svg" alt="Island Cove Logo">
+            <a href="/index.html"><img id="footer-logo" src="./images/IslandCoveWhiteLogo.svg" alt="Island Cove Logo"></a>
             <div class="company-logos">
-                <img src="./images/NauticStarWhiteLogo.svg" alt="NauticStar Logo">
-                <img src="./images/YamahaLogo.svg" alt="Yamaha Logo">
+                <a href="https://nauticstarboats.com" style="grid-column: 2;"><img src="./images/NauticStarWhiteLogo.svg" alt="NauticStar Logo"></a>
+                <a href="https://yamahaoutboards.com" style="grid-column: 3;"><img src="./images/YamahaLogo.svg" alt="Yamaha Logo"></a>
             </div>
             <div class="footer-pages">
-                <div style="grid-column: 1; grid-row: 1;">
-                    <p class="dm-xtra-bold text-green footer-page-header">MARINA</p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Take A Tour</a></p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Marina Map</a></p>
+                <div style="grid-column: 2;">
+                    <p class="dm-xtra-bold text-green footer-page-header">PAGES</p>
+                    <p class="dm-xtra-light text-green footer-page-name"><a href="/marina.html">Marina</a></p>
+                    <p class="dm-xtra-light text-green footer-page-name"><a href="/services.html">Services</a></p>
+                    <p class="dm-xtra-light text-green footer-page-name"><a href="/yamaha.html">Yamaha</a></p>
+                    <p class="dm-xtra-light text-green footer-page-name"><a href="/boat-sales.html">Boat Sales</a></p>
                 </div>
-                <div style="grid-column: 1; grid-row: 2;">
-                    <p class="dm-xtra-bold text-green footer-page-header">CONTACT US</p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Directions</a></p>
-                </div>
-                <div style="grid-column: 2; grid-row: 1;">
-                    <p class="dm-xtra-bold text-green footer-page-header">SERVICES</p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Marina Services</a></p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Service Department</a></p>
-                </div>
-                <div style="grid-column: 2; grid-row: 2;">
-                    <p class="dm-xtra-bold text-green footer-page-header">YAMAHA</p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Yamaha Repower</a></p>
-                </div>
-                <div  style="grid-column: 3; grid-row: 1 / 2;">
-                    <p class="dm-xtra-bold text-green footer-page-header">BOAT SALES</p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">NauticStar Boats</a></p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Brokerage</a></p>
-                    <p class="dm-xtra-light text-green footer-page-name"><a href="">Boat Sales Inventory</a></p>
-                </div>
-                <div  style="grid-column: 4; grid-row: 1;">
+                <div  style="grid-column: 3;">
                     <p class="dm-xtra-light text-white">47 Sunrise Ave</p>
                     <p class="dm-xtra-light text-white">Old Saybrook, CT 06475</p>
                     <p class="dm-xtra-bold text-green"><a href="">Directions</a></p>
                 </div>
-                <div  style="grid-column: 4; grid-row: 2;">
+                <div  style="grid-column: 4;">
                     <p class="dm-xtra-light text-white">HOURS OF OPERATION</p>
                     <p class="dm-xtra-light text-white">Monday - Friday :  7:30am - 4:30pm</p>
                     <p class="dm-xtra-light text-white">Saturday & Sunday : Closed</p>
@@ -76,11 +59,12 @@
         <hr> 
         <div class="lower-footer">
             <p class="dm-xtra-light text-white">©2025 Island Cove Marina. All Rights Reserved.</p>
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>
-            <div>
+            <a href="https://www.instagram.com/islandcovemarinact/"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a href="https://www.facebook.com/people/Island-Cove-Marina/100064779784013/"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>
+            <a href="#page-top" class="to-top">
                 <p class="dm-xtra-light text-white">Back to Top</p>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z"/></svg>
+            </a>
             </div>
         </div>
     </footer>
