@@ -33,7 +33,7 @@
                 <h3 class="dm-light text-green">POWERED BY YAMAHA</h3>
                 <p class="dm-med nautic-p3">Visit <a class="text-green" href="https://nauticstarboats.com">NauticStarBoats.com</a></p>
             </div>
-            <div class="nautic-cards">
+            <!-- <div class="nautic-cards">
                 <img src="./images/nauticstar.jpg" alt="NauticStar Boat For Sale">
                 <div class="bg-black">
                     <p class="dm-reg text-white boat-name">2023 <span class="dm-black">NauticStar</span> 243DC w/YAMAHA VF250XB</p>
@@ -120,7 +120,7 @@
                     <p class="dm-med text-grey boat-color">Carolina Blue</p>
                 </div>
                 <h1 class="dm-xtra-bold">$89,977</h1>
-            </div>
+            </div> -->
         </section>
         <hr>
         <section id="preowned-boats">
@@ -208,5 +208,46 @@
             </div>
         </div>
     </footer>
+    <script>
+        async function fetchNauticBoats() {
+            try {
+                const response = await fetch("https://sheetdb.io/api/v1/1wu4kwc39kw3v");
+                const data = await response.json();
+                console.log(data);
+                const container = document.getElementById("nautic-star-boats");
+
+                data.forEach(boat => {
+                    const directImgURL = convertGoogleDriveURL(boat.Image);
+                    const card = document.createElement("div");
+                    card.classList.add("nautic-cards");
+
+                    card.innerHTML = `
+                        <img src="${directImgURL}" alt="${boat.Title}">
+                        <div class="bg-black">
+                            <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                            <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                        </div>
+                        <h1 class="dm-xtra-bold">${boat.Price}</h1>
+                    `;
+                    container.appendChild(card);
+                    console.log("Converted image URL:", directImgURL);
+                });
+            } catch (error) {
+                console.error("Error fetching boat data:", error);
+            }
+        }
+
+        function convertGoogleDriveURL(driveURL) {
+            // Match the file ID from Google Drive share links
+            const match = driveURL.match(/\/d\/([^\/]+)\//) || driveURL.match(/id=([^&]+)/);
+            if (match && match[1]) {
+                return `https://drive.google.com/thumbnail?id=${match[1]}`;
+            }
+            return driveURL; // fallback if format doesn't match
+        }
+
+        document.addEventListener("DOMContentLoaded", fetchNauticBoats);
+
+    </script>
 </body>
 </html>
