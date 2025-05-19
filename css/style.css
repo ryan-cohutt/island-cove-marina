@@ -308,7 +308,7 @@ main {
     justify-items: center;
     align-items: center;
     width: 100%;
-    background-image: url("./images/winter.jpg");
+    background-image: url("../images/winter.jpg");
     background-position: bottom;
     div {
         width: 100%;
