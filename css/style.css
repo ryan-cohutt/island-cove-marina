@@ -318,6 +318,28 @@ main {
         align-items: center;
         background-color: #17171779;
         padding: 70px 0;
+        h3 {
+            font-size: 50px;
+        }
+    }
+}
+
+#services-header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    background-image: url("../images/winter.jpg");
+    background-position: bottom;
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: #17171779;
+        padding: 70px 0;
         img {
             width: 650px;
         }
@@ -524,10 +546,12 @@ main {
             font-size: 27px;
             line-height: 41px;
         }
-        button {
-            font-size: 27px;
-            width: 330px;
-            height: 75px;
+        a {
+            button {
+                font-size: 27px;
+                width: 330px;
+                height: 75px;
+            }
         }
     }
 }
@@ -573,6 +597,76 @@ main {
         }        
     }
 
+}
+
+#services-head-sect {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    div {
+        padding: 80px 0;
+        width: 1400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 1fr min-content;
+        row-gap: 20px;
+        column-gap: 40px;
+        h1 {
+            font-size: 80px;
+            line-height: 1.2em;
+            margin: 0;
+            text-align: end;
+            grid-column: 1;
+            grid-row: 1 / -1;
+            align-self: start;
+        }
+        h2 {
+            margin: 0;
+            font-size: 70px;
+            line-height: 88px;
+            grid-column: 2;
+            grid-row: 1;
+        }
+        p {
+            font-size: 25px;
+            margin: 0;
+            grid-column: 2;
+            grid-row: 2;
+        }
+        ul {
+            margin: 0;
+            font-size: 25px;
+        }    
+    }
+}
+
+#services-columns {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    .cont {
+        padding: 90px 0;
+        width: 1400px;
+        display: flex;
+        gap: 50px;
+        div {
+            h1 {
+                text-transform: uppercase;
+                font-size: 50px;
+                margin: 0;
+            }
+            hr {
+                margin: 20px 0;
+                border: 1.4px solid #40A130;
+            }
+            p {
+                font-size: 25px;
+                margin: 0;
+            }
+        }
+    }
 }
 
 #nautic-star-sect {
