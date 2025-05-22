@@ -1256,18 +1256,18 @@ footer {
             }
             h1 {
                 text-wrap: wrap;
-                padding-left: 40px;
+                padding-left: 30px;
                 font-size: 60px;
                 line-height: 60px;
             }
             p {
                 text-wrap: wrap;
-                padding-left: 40px;
+                padding-left: 30px;
                 font-size: 28px;
                 line-height: 40px;
             }
             button {
-                margin-left: 40px;
+                margin-left: 30px;
             }
         }
     }
