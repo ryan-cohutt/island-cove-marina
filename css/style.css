@@ -9,6 +9,9 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -462,7 +465,7 @@ main {
 }
 
 #summer-sect {
-    width: 100%;
+    width: 100vw;
     height: 775px;
     background: url("../images/summer.jpg");
     display: grid;
@@ -1234,6 +1237,36 @@ footer {
             }
         }
     }
+    #boat-head-sect {
+        width: 100%;
+        justify-items: start;
+        display: flex;
+        justify-content: center;
+        div {
+            width: 100vw;
+            box-sizing: border-box;
+            max-width: 100%;
+            left: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            img {
+                align-self: center;
+            }
+            h1 {
+                text-wrap: wrap;
+                padding-left: 40px;
+            }
+            p {
+                text-wrap: wrap;
+                padding-left: 40px;
+            }
+            button {
+                margin-left: 40px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1070px) {
@@ -1321,6 +1354,32 @@ footer {
             }
         }
     }
+    #summer-sect {
+        div {
+            width: 500px;
+            height: max-content;
+            text-wrap: wrap;
+            h1 {
+
+            }
+            p {
+                width: 100%;
+            }
+        }
+    }
+    #winter-sect {
+        div {
+            width: 500px;
+            height: max-content;
+            text-wrap: wrap;
+            h1 {
+
+            }
+            p {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 640px) {
@@ -1391,6 +1450,36 @@ footer {
             padding-left: 40px;
             p {
                 display: none !important;
+            }
+        }
+    }
+    #summer-sect {
+        div {
+            width: 350px;
+            height: max-content;
+            text-wrap: wrap;
+            h1 {
+
+            }
+            p {
+                width: 100%;
+                font-size: 22px;
+                line-height: 27px;
+            }
+        }
+    }
+    #winter-sect {
+        div {
+            width: 350px;
+            height: max-content;
+            text-wrap: wrap;
+            h1 {
+                text-align: center;
+            }
+            p {
+                width: 100%;
+                font-size: 22px;
+                line-height: 27px;
             }
         }
     }
