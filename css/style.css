@@ -12,6 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    main {
+        width: 100%;
+    }
 }
 
 button {
@@ -1197,6 +1200,9 @@ footer {
 }
 
 @media (max-width: 1500px) {
+    main {
+        width: auto !important;
+    }
     footer {
         justify-items: center;
         .upper-footer {
@@ -1271,6 +1277,44 @@ footer {
             }
         }
     }
+    #mechanic-sect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #nautic-star-sect {
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr min-content min-content;
+        width: 100%;
+        max-width: 100vw;
+        #nautic-head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .nautic-p1 {
+                width: 100%;
+                max-width: 750px;
+                text-align: center;
+            }
+        }
+        .nautic-cards {
+            max-width: 450px;
+            align-self: center;
+            justify-self: center;
+        }
+        .nautic-card-1 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .nautic-card-2 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .nautic-card-3 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
 }
 
 @media (max-width: 1070px) {
@@ -1294,6 +1338,39 @@ footer {
     }
     #side-menu {
         display: block;
+    }
+    #nautic-star-sect {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr min-content min-content min-content;
+        width: 100%;
+        max-width: 100vw;
+        #nautic-head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .nautic-p1 {
+                width: 100%;
+                max-width: 750px;
+                text-align: center;
+            }
+        }
+        .nautic-cards {
+            max-width: 450px;
+            align-self: center;
+            justify-self: center;
+        }
+        .nautic-card-1 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .nautic-card-2 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .nautic-card-3 {
+            grid-column: 1;
+            grid-row: 4;
+        }
     }
 }
 
@@ -1485,6 +1562,88 @@ footer {
                 width: 100%;
                 font-size: 17px;
                 line-height: 27px;
+            }
+        }
+    }
+    #mechanic-sect {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100vw;
+        display: flex;
+        text-align: center;
+        h3 {
+
+        }
+        h1 {
+            text-wrap: wrap;
+        }
+        .dept-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3 {
+                text-wrap: wrap;
+            }
+            p {
+                font-size: 22px;
+                line-height: 30px;
+                width: 100%;
+            }
+            a {
+                button {
+                    width: 260px;
+                    height: 65;
+                }
+            }
+        }
+    }
+    #nautic-star-sect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100vw;
+        text-wrap: wrap;
+        #nautic-head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #nautic-star-logo {
+                width: 280px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+            .nautic-p1 {
+                font-size: 20px;
+                line-height: 32px;
+                width: 100%;
+                max-width: 100vw;
+                text-align: center;
+            }
+            .nautic-p2 {
+                width: 100%;
+                max-width: 100vw;
+                margin-left: 15px;
+            }
+        }
+        .nautic-cards {
+            max-width: 340px;
+            align-self: center;
+            justify-self: center;
+            img {
+
+            }
+            div {
+                .boat-name {
+
+                }
+                .boat-color {
+
+                }
+            }
+            h1 {
+
             }
         }
     }
