@@ -1315,6 +1315,21 @@ footer {
             grid-row: 3;
         }
     }
+    #contact-sect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        max-width: 800px;
+    }
+    .home-hero {
+        width: 900px;
+        max-width: 100%;
+        h1 {
+            font-size: 65px !important;
+            line-height: 74px !important;
+        }
+    }
 }
 
 @media (max-width: 1070px) {
@@ -1370,6 +1385,30 @@ footer {
         .nautic-card-3 {
             grid-column: 1;
             grid-row: 4;
+        }
+    }
+    .home-hero {
+        div {
+            display: grid;
+            grid-template-columns: 1fr !important;
+            grid-template-rows: min-content min-content min-content !important;
+            row-gap: 20px;
+            .btn-white {
+                width: 100%;
+                max-width: 400px;
+                height: 80px;
+                align-self: center;
+                justify-self: center;
+                a {
+                    height: 100% !important;
+                    h2 {
+                        font-size: 30px !important;
+                    }
+                    svg {
+                        width: 30px !important;
+                    }
+                }
+            }
         }
     }
 }
@@ -1644,6 +1683,57 @@ footer {
             }
             h1 {
 
+            }
+        }
+    }
+    #contact-sect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        h3 {
+
+        }
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 32px;
+        }
+        div {
+            flex-direction: column;
+            align-items: center;
+            button {
+                width: 260px;
+                height: 65px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+    .home-hero {
+        div {
+            display: grid;
+            grid-template-columns: 1fr !important;
+            grid-template-rows: min-content min-content min-content !important;
+            row-gap: 20px;
+            .btn-white {
+                width: 100vw;
+                max-width: 400px;
+                height: 80px;
+                align-self: center;
+                justify-self: start;
+                a {
+                    height: 100% !important;
+                    h2 {
+                        font-size: 30px !important;
+                    }
+                    svg {
+                        width: 30px !important;
+                    }
+                }
             }
         }
     }
