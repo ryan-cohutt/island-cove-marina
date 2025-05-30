@@ -378,6 +378,7 @@ main {
         column-gap: 40px;
         row-gap: 50px;
         max-width: 100%;
+        justify-content: center;
         .motor-item {
             width: 100%;
             grid-column: auto;
@@ -1336,7 +1337,7 @@ footer {
     .motor-sect {
         width: 100%;
         .motor-cards {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
     }
     #services-columns {
@@ -1546,7 +1547,7 @@ footer {
     .motor-sect {
         width: 100%;
         .motor-cards {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }
     }
     #services-head-sect {
