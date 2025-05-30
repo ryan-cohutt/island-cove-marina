@@ -9,7 +9,7 @@ hamburger.addEventListener("click", () => {
     xIcon.classList.toggle("svg-active");
 });
 
-// const key = 'AIzaSyAAtTB-oDPIgju6h-iKK0S2qy8o5goZj9k';
+const key = 'AIzaSyAAtTB-oDPIgju6h-iKK0S2qy8o5goZj9k';
 const spreadsheetId = '1pWvuzuRBXHb5cgmoPNIoAY14_TVWILMUtutGn9X24fU';
 const boatsNew = 'NewBoats';
 const boatsOld = 'PreownedBoats';
@@ -48,7 +48,7 @@ const motorsOld = 'PreownedMotors';
 
 async function fetchNewBoats() {
     try {
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsNew}?key=AIzaSyAAtTB-oDPIgju6h-iKK0S2qy8o5goZj9k`);
+        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsNew}?key=${key}`);
         const data = await response.json();
 
         const values = data.values;
@@ -89,7 +89,7 @@ async function fetchNewBoats() {
 
 async function fetchPreownedBoats() {
     try {
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsOld}?key=AIzaSyAAtTB-oDPIgju6h-iKK0S2qy8o5goZj9k`);
+        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsOld}?key=${key}`);
         const data = await response.json();
 
         const values = data.values;
@@ -130,7 +130,7 @@ async function fetchPreownedBoats() {
 
 async function fetchNewMotors() {
     try {
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${motorsNew}?key=AIzaSyAAtTB-oDPIgju6h-iKK0S2qy8o5goZj9k`);
+        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${motorsNew}?key=${key}`);
         const data = await response.json();
 
         const values = data.values;
@@ -191,7 +191,7 @@ async function fetchNewMotors() {
 
 async function fetchOldMotors() {
     try {
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${motorsOld}?key=AIzaSyAAtTB-oDPIgju6h-iKK0S2qy8o5goZj9k`);
+        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${motorsOld}?key=${key}`);
         const data = await response.json();
 
         const values = data.values;
