@@ -151,7 +151,7 @@
                 <h3 class="dm-bold">PREOWNED BOATS</h3>
                 <p class="dm-med nautic-p3">Our Winter Storage Customers Listing Their Boat With Us Can <b class="text-green">Enjoy 10% OFF Storage</b></p>
             </div>
-            <div class="nautic-cards">
+            <!-- <div class="nautic-cards">
                 <img src="./images/nauticstar.jpg" alt="NauticStar Boat For Sale">
                 <div class="bg-black">
                     <p class="dm-reg text-white boat-name">2023 <span class="dm-black">NauticStar</span> 243DC w/YAMAHA VF250XB</p>
@@ -190,7 +190,7 @@
                     <p class="dm-med text-grey boat-color">Carolina Blue</p>
                 </div>
                 <h1 class="dm-xtra-bold">$89,977</h1>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer>
@@ -232,9 +232,9 @@
         </div>
     </footer>
     <script>
-        async function fetchNauticBoats() {
+        async function fetchNewBoats() {
             try {
-                const response = await fetch("https://sheetdb.io/api/v1/1wu4kwc39kw3v");
+                const response = await fetch("https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsNew}?key=${key}");
                 const data = await response.json();
                 console.log(data);
                 const container = document.getElementById("nautic-star-boats");
@@ -269,7 +269,7 @@
             return driveURL; // fallback if format doesn't match
         }
 
-        document.addEventListener("DOMContentLoaded", fetchNauticBoats);
+        document.addEventListener("DOMContentLoaded", fetchNewBoats);
 
     </script>
     <script src="./script.js"></script>
