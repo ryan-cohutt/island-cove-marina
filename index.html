@@ -32,6 +32,42 @@
                     </svg>
                 </button>
             </div>
+            <div id="contact-form">
+                <div id="contact-submitted">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: white; width: 24px;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <h1 class="dm-bold">Submitted</h1>
+                </div>
+                <div id="contact-header">
+                    <h1 class="dm-light text-green">GET IN TOUCH</h1>
+                    <button id="contact-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="fill: black; width: 24px;" id="x" class="">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                    </svg></button>  
+                </div>
+                <form name="gform" id="gform" enctype="text/plain" target="hidden_iframe" onsubmit="handleFormSubmit()" action="https://docs.google.com/forms/d/e/1FAIpQLSeTl1A9Pb_hji6r2gMGuzJiR5aqkqzyHXOXAVe5bXQhoEGbMQ/formResponse?">
+                    <div style="grid-column: 1; grid-row: 1;">
+                        <label for="entry.995119004" class="dm-bold">First Name</label>
+                        <input type="text" name="entry.995119004" id="entry.995119004" style="grid-column: 1; grid-row: 1;">
+                    </div>
+                    <div style="grid-column: 2; grid-row: 1;">
+                        <label for="entry.984627864" class="dm-bold">Last Name</label>
+                        <input type="text" name="entry.984627864" id="entry.984627864" style="grid-column: 2; grid-row: 1;">
+                    </div>
+                    <div style="grid-column: 1; grid-row: 2;">
+                        <label for="entry.1883964681" class="dm-bold">Email</label>
+                        <input type="email" name="entry.1883964681" id="entry.1883964681" style="grid-column: 1; grid-row: 2;">
+                    </div>
+                    <div style="grid-column: 2; grid-row: 2;">
+                        <label for="entry.408003117" class="dm-bold">Phone Number</label>
+                        <input type="tel" name="entry.408003117" id="entry.408003117" style="grid-column: 2; grid-row: 2;">
+                    </div>
+                    <div style="grid-column: 1 / -1; grid-row: 3;">
+                        <label for="entry.1131240354" class="dm-bold">Message</label>
+                        <textarea name="entry.1131240354" id="entry.1131240354" style="grid-column: 1 / -1; grid-row: 3;"></textarea>
+                    </div>
+                    <input type="submit" name="submit" id="submit" class="dm-bold btn-green text-white" value="Submit" style="grid-column: 1 / -1; grid-row: 4;">
+                </form>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="clearFormIfSubmitted()"></iframe>
+            </div>
         </nav>
         <div class="home-hero">
             <h1 class="dm-bold-it">Enjoy Your Exclusive Marina Services</h1>

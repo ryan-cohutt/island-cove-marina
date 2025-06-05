@@ -2,6 +2,43 @@ const hamburger = document.querySelector(".hamburger");
 const sideMenu = document.querySelector("#side-menu");
 const menuIcon = document.querySelector("#menu");
 const xIcon = document.querySelector("#x");
+const contactBtn = document.querySelector(".nav-contact");
+const contactForm = document.querySelector("#contact-form")
+const contactClose = document.querySelector("#contact-close")
+const contactSubmitted = document.querySelector("#contact-submitted")
+
+contactBtn.addEventListener("click", () => {
+    if (contactForm.style.display === "none" || contactForm.style.display === "") {
+        contactForm.style.display = "block";
+    } else {
+        contactForm.style.display = "none";
+    }
+});
+
+contactClose.addEventListener("click", () => {
+    contactForm.style.display = "none";
+    setTimeout(() => {
+        contactSubmitted.style.zIndex = "-1000";
+        contactSubmitted.style.opacity = "0";
+    }, 1000)
+})
+
+let submitted = false;
+
+function handleFormSubmit(event) {
+    submitted = true;
+}
+
+function clearFormIfSubmitted() {
+    if (submitted) {
+        document.getElementById("gform").reset();
+        submitted = false;
+        contactSubmitted.style.zIndex = "1000";
+        setTimeout(() => {
+            contactSubmitted.style.opacity = "1";
+        }, 1000);
+    }
+}
 
 hamburger.addEventListener("click", () => {
     sideMenu.classList.toggle("active");
