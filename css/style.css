@@ -825,6 +825,14 @@ main {
             height: 350px;
             object-fit: cover;
         }
+        button {
+            position: absolute;
+            margin: 15px 0 0 15px;
+            padding: 7px 36px;
+            background-color: #d72152;
+            border: none;
+            font-size: 24px;
+        }
         div {
             display: flex;
             flex-direction: column;
@@ -851,19 +859,10 @@ main {
             font-size: 40px;
             justify-self: end;
             align-self: end;
+            span {
+                text-decoration: line-through;
+            }
         }
-    }
-    .nautic-card-1 {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    .nautic-card-2 {
-        grid-column: 2;
-        grid-row: 2;
-    }
-    .nautic-card-3 {
-        grid-column: 3;
-        grid-row: 2;
     }
 }
 
@@ -907,6 +906,14 @@ main {
             height: 350px;
             object-fit: cover;
         }
+        button {
+            position: absolute;
+            margin: 15px 0 0 15px;
+            padding: 7px 36px;
+            background-color: #d72152;
+            border: none;
+            font-size: 24px;
+        }
         div {
             display: flex;
             flex-direction: column;
@@ -933,6 +940,9 @@ main {
             font-size: 40px;
             justify-self: end;
             align-self: end;
+            span {
+                text-decoration: line-through;
+            }
         }
     }
 }
@@ -977,6 +987,14 @@ main {
             height: 350px;
             object-fit: cover;
         }
+        button {
+            position: absolute;
+            margin: 15px 0 0 15px;
+            padding: 7px 36px;
+            background-color: #d72152;
+            border: none;
+            font-size: 24px;
+        }
         div {
             display: flex;
             flex-direction: column;
@@ -1003,6 +1021,9 @@ main {
             font-size: 40px;
             justify-self: end;
             align-self: end;
+            span {
+                text-decoration: line-through;
+            }
         }
     }
 }

@@ -3,29 +3,37 @@ const sideMenu = document.querySelector("#side-menu");
 const menuIcon = document.querySelector("#menu");
 const xIcon = document.querySelector("#x");
 const contactBtn = document.querySelector(".nav-contact");
+const contactMobile = document.querySelector(".contact-mobile")
 const contactForm = document.querySelector("#contact-form")
 const contactClose = document.querySelector("#contact-close")
 const contactSubmitted = document.querySelector("#contact-submitted")
 
-if (contactForm) {
-    contactBtn.addEventListener("click", () => {
-        if (contactForm.style.display === "none" || contactForm.style.display === "") {
-            contactForm.style.display = "block";
-        } else {
-            contactForm.style.display = "none";
-        }
-    });
-
-    contactClose.addEventListener("click", () => {
+contactBtn.addEventListener("click", () => {
+    if (contactForm.style.display === "none" || contactForm.style.display === "") {
+        contactForm.style.display = "block";
+    } else {
         contactForm.style.display = "none";
-        setTimeout(() => {
-            contactSubmitted.style.zIndex = "-1000";
-            contactSubmitted.style.opacity = "0";
-        }, 1000)
-    })
-} else {
+    }
+});
 
-}
+contactMobile.addEventListener("click", () => {
+    if (contactForm.style.display === "none" || contactForm.style.display === "") {
+        contactForm.style.display = "block";
+    } else {
+        contactForm.style.display = "none";
+    }
+    sideMenu.classList.toggle("active");
+    menuIcon.classList.toggle("svg-active");
+    xIcon.classList.toggle("svg-active");
+});
+
+contactClose.addEventListener("click", () => {
+    contactForm.style.display = "none";
+    setTimeout(() => {
+        contactSubmitted.style.zIndex = "-1000";
+        contactSubmitted.style.opacity = "0";
+    }, 1000)
+})
 
 
 let submitted = false;
@@ -110,19 +118,36 @@ async function fetchHomeBoats() {
                 boat[header] = row[i];
             });
 
-            const directImgURL = convertGoogleDriveURL(boat.Image);
-            const card = document.createElement("div");
-            card.classList.add("nautic-cards");
+            if (boat.Sale == "OnSale") {
+                const directImgURL = convertGoogleDriveURL(boat.Image);
+                const card = document.createElement("div");
+                card.classList.add("nautic-cards");
 
-            card.innerHTML = `
-                <img src="${directImgURL}" alt="${boat.Title}">
-                <div class="bg-black">
-                    <p class="dm-reg text-white boat-name">${boat.Title}</p>
-                    <p class="dm-med text-grey boat-color">${boat.Color}</p>
-                </div>
-                <h1 class="dm-xtra-bold">${boat.Price}</h1>
-            `;
-            container.appendChild(card);
+                card.innerHTML = `
+                    <img src="${directImgURL}" alt="${boat.Title}">
+                    <button class="text-white dm-xtra-bold">Sale</button>
+                    <div class="bg-black">
+                        <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                        <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                    </div>
+                    <h1 class="dm-xtra-bold"><span class="text-grey">${boat.Price}</span> ${boat.NewPrice}</h1>
+                `;
+                container.appendChild(card); 
+            } else {
+                const directImgURL = convertGoogleDriveURL(boat.Image);
+                const card = document.createElement("div");
+                card.classList.add("nautic-cards");
+
+                card.innerHTML = `
+                    <img src="${directImgURL}" alt="${boat.Title}">
+                    <div class="bg-black">
+                        <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                        <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                    </div>
+                    <h1 class="dm-xtra-bold">${boat.Price}</h1>
+                `;
+                container.appendChild(card); 
+            }
         });
     } catch (error) {
         console.error("Error fetching new boat data:", error);
@@ -151,19 +176,36 @@ async function fetchNewBoats() {
                 boat[header] = row[i];
             });
 
-            const directImgURL = convertGoogleDriveURL(boat.Image);
-            const card = document.createElement("div");
-            card.classList.add("nautic-cards");
+            if (boat.Sale == "OnSale") {
+                const directImgURL = convertGoogleDriveURL(boat.Image);
+                const card = document.createElement("div");
+                card.classList.add("nautic-cards");
 
-            card.innerHTML = `
-                <img src="${directImgURL}" alt="${boat.Title}">
-                <div class="bg-black">
-                    <p class="dm-reg text-white boat-name">${boat.Title}</p>
-                    <p class="dm-med text-grey boat-color">${boat.Color}</p>
-                </div>
-                <h1 class="dm-xtra-bold">${boat.Price}</h1>
-            `;
-            container.appendChild(card);
+                card.innerHTML = `
+                    <img src="${directImgURL}" alt="${boat.Title}">
+                    <button class="text-white dm-xtra-bold">Sale</button>
+                    <div class="bg-black">
+                        <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                        <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                    </div>
+                    <h1 class="dm-xtra-bold"><span class="text-grey">${boat.Price}</span> ${boat.NewPrice}</h1>
+                `;
+                container.appendChild(card); 
+            } else {
+                const directImgURL = convertGoogleDriveURL(boat.Image);
+                const card = document.createElement("div");
+                card.classList.add("nautic-cards");
+
+                card.innerHTML = `
+                    <img src="${directImgURL}" alt="${boat.Title}">
+                    <div class="bg-black">
+                        <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                        <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                    </div>
+                    <h1 class="dm-xtra-bold">${boat.Price}</h1>
+                `;
+                container.appendChild(card); 
+            }
         });
     } catch (error) {
         console.error("Error fetching new boat data:", error);
@@ -192,19 +234,36 @@ async function fetchPreownedBoats() {
                 boat[header] = row[i];
             });
 
-            const directImgURL = convertGoogleDriveURL(boat.Image);
-            const card = document.createElement("div");
-            card.classList.add("nautic-cards");
+            if (boat.Sale == "OnSale") {
+                const directImgURL = convertGoogleDriveURL(boat.Image);
+                const card = document.createElement("div");
+                card.classList.add("nautic-cards");
 
-            card.innerHTML = `
-                <img src="${directImgURL}" alt="${boat.Title}">
-                <div class="bg-black">
-                    <p class="dm-reg text-white boat-name">${boat.Title}</p>
-                    <p class="dm-med text-grey boat-color">${boat.Color}</p>
-                </div>
-                <h1 class="dm-xtra-bold">${boat.Price}</h1>
-            `;
-            container.appendChild(card);
+                card.innerHTML = `
+                    <img src="${directImgURL}" alt="${boat.Title}">
+                    <button class="text-white dm-xtra-bold">Sale</button>
+                    <div class="bg-black">
+                        <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                        <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                    </div>
+                    <h1 class="dm-xtra-bold"><span class="text-grey">${boat.Price}</span> ${boat.NewPrice}</h1>
+                `;
+                container.appendChild(card); 
+            } else {
+                const directImgURL = convertGoogleDriveURL(boat.Image);
+                const card = document.createElement("div");
+                card.classList.add("nautic-cards");
+
+                card.innerHTML = `
+                    <img src="${directImgURL}" alt="${boat.Title}">
+                    <div class="bg-black">
+                        <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                        <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                    </div>
+                    <h1 class="dm-xtra-bold">${boat.Price}</h1>
+                `;
+                container.appendChild(card); 
+            }
         });
     } catch (error) {
         console.error("Error fetching new boat data:", error);
