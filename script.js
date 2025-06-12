@@ -7,21 +7,26 @@ const contactForm = document.querySelector("#contact-form")
 const contactClose = document.querySelector("#contact-close")
 const contactSubmitted = document.querySelector("#contact-submitted")
 
-contactBtn.addEventListener("click", () => {
-    if (contactForm.style.display === "none" || contactForm.style.display === "") {
-        contactForm.style.display = "block";
-    } else {
-        contactForm.style.display = "none";
-    }
-});
+if (contactForm) {
+    contactBtn.addEventListener("click", () => {
+        if (contactForm.style.display === "none" || contactForm.style.display === "") {
+            contactForm.style.display = "block";
+        } else {
+            contactForm.style.display = "none";
+        }
+    });
 
-contactClose.addEventListener("click", () => {
-    contactForm.style.display = "none";
-    setTimeout(() => {
-        contactSubmitted.style.zIndex = "-1000";
-        contactSubmitted.style.opacity = "0";
-    }, 1000)
-})
+    contactClose.addEventListener("click", () => {
+        contactForm.style.display = "none";
+        setTimeout(() => {
+            contactSubmitted.style.zIndex = "-1000";
+            contactSubmitted.style.opacity = "0";
+        }, 1000)
+    })
+} else {
+
+}
+
 
 let submitted = false;
 
