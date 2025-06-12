@@ -83,6 +83,47 @@ const motorsOld = 'PreownedMotors';
 //     }
 // }
 
+async function fetchHomeBoats() {
+    try {
+        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsNew}?key=${key}`);
+        const data = await response.json();
+
+        const values = data.values;
+        if (!values || values.length < 2) {
+            console.error("No boat data found.");
+            return;
+        }
+
+        const headers = values[0];
+        const rows = values.slice(1, 4);
+
+        const container = document.getElementById("nautic-star-sect");
+
+        rows.forEach(row => {
+            const boat = {};
+            headers.forEach((header, i) => {
+                boat[header] = row[i];
+            });
+
+            const directImgURL = convertGoogleDriveURL(boat.Image);
+            const card = document.createElement("div");
+            card.classList.add("nautic-cards");
+
+            card.innerHTML = `
+                <img src="${directImgURL}" alt="${boat.Title}">
+                <div class="bg-black">
+                    <p class="dm-reg text-white boat-name">${boat.Title}</p>
+                    <p class="dm-med text-grey boat-color">${boat.Color}</p>
+                </div>
+                <h1 class="dm-xtra-bold">${boat.Price}</h1>
+            `;
+            container.appendChild(card);
+        });
+    } catch (error) {
+        console.error("Error fetching new boat data:", error);
+    }
+}
+
 async function fetchNewBoats() {
     try {
         const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${boatsNew}?key=${key}`);
@@ -300,6 +341,7 @@ function convertGoogleDriveURL(driveURL) {
 document.addEventListener("DOMContentLoaded", (event) => {
     const boatID = document.querySelector("#preowned-boats")
     const motorID = document.querySelector("#old-motors")
+    const homeID = document.querySelector("#home-header")
     
     if (boatID) {
         fetchNewBoats();
@@ -307,6 +349,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     } else if (motorID) {
         fetchNewMotors();
         fetchOldMotors();
+    } else if (homeID) {
+        fetchHomeBoats()
     } else {
 
     }
