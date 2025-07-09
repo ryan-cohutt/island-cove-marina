@@ -295,7 +295,7 @@ async function fetchNewMotors() {
             if (motor.Sale == "OnSale") {
                 const directImgURL = convertGoogleDriveURL(motor.Image);
                 const card = document.createElement("div");
-                card.classList.add("nautic-cards");
+                card.classList.add("motor-item-cont");
 
                 card.innerHTML = `              
                     <div class="motor-item">
@@ -312,7 +312,7 @@ async function fetchNewMotors() {
             } else {
                 const directImgURL = convertGoogleDriveURL(motor.Image);
                 const card = document.createElement("div");
-                card.classList.add("nautic-cards");
+                card.classList.add("motor-item-cont");
 
                 card.innerHTML = `              
                     <div class="motor-item">
@@ -397,7 +397,7 @@ function convertGoogleDriveURL(driveURL) {
     // Match the file ID from Google Drive share links
     const match = driveURL.match(/\/d\/([^\/]+)\//) || driveURL.match(/id=([^&]+)/);
     if (match && match[1]) {
-        return `https://drive.google.com/thumbnail?id=${match[1]}`;
+        return `https://lh3.googleusercontent.com/d/${match[1]}=s1000`;
     }
     return driveURL; // fallback if format doesn't match
 }
