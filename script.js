@@ -300,7 +300,6 @@ async function fetchNewMotors() {
                 card.innerHTML = `              
                     <div class="motor-item">
                         <div>
-                            <button class="text-white dm-xtra-bold">Sale</button>
                             <img src="${directImgURL}" alt="${motor.Title}">
                         </div>
                         <h4 class="dm-med text-green">${motor.Title}</h4>
@@ -361,7 +360,6 @@ async function fetchOldMotors() {
                 card.innerHTML = `              
                     <div class="motor-item">
                         <div>
-                            <button class="text-white dm-xtra-bold">Sale</button>
                             <img src="${directImgURL}" alt="${motor.Title}">
                         </div>
                         <h4 class="dm-med text-green">${motor.Title}</h4>

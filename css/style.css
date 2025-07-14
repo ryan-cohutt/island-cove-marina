@@ -332,6 +332,27 @@ main {
     }
 }
 
+#yamaha-sale {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: #811230;
+        padding: 40px 0;
+        h3 {
+            font-size: 60px;
+            margin: 0;
+        }
+    }
+}
+
 #services-header {
     display: flex;
     flex-direction: column;
