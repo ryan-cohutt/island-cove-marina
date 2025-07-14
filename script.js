@@ -356,7 +356,7 @@ async function fetchOldMotors() {
             if (motor.Sale == "OnSale") {
                 const directImgURL = convertGoogleDriveURL(motor.Image);
                 const card = document.createElement("div");
-                card.classList.add("nautic-cards");
+                card.classList.add("motor-item-cont");
 
                 card.innerHTML = `              
                     <div class="motor-item">
