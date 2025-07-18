@@ -403,6 +403,7 @@ main {
         width: 100%;
         max-width: 100%;
         justify-content: center;
+        justify-items: center;
         .motor-item-cont {
             .motor-item {
                 grid-column: auto;
